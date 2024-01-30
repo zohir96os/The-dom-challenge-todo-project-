@@ -17,12 +17,13 @@ body {
 h3 {
   font-size: 32px;
 }
-input {
+.input-area input {
   margin: 10px auto;
   border: none;
   color: #000;
   padding: 10px;
   border-radius: 4px;
+  width: 600px;
 }
 
 button {
