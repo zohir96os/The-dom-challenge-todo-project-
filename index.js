@@ -38,6 +38,7 @@ let addNewTask = (e) => {
     const newTaskElement = creatTaskElement(trimmedInput);
     inputField.prepend(newTaskElement);
     inputText.value = "";
+    add.innerText = "Add";
   }
 };
 //Remove task function
@@ -51,6 +52,7 @@ let editTask = (e) => {
   input.disabled = false;
   inputText.value = e.target.parentNode.firstChild.value;
   inputText.focus();
+  add.innerText = "Save";
   e.target.parentNode.remove();
 };
 
@@ -59,5 +61,6 @@ add.addEventListener("click", addNewTask);
 inputText.addEventListener("keyup", function (event) {
   if (event.key === "Enter") {
     addNewTask(event);
+    add.innerText = "Add";
   }
 });
