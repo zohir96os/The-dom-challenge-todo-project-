@@ -50,6 +50,7 @@ let editTask = (e) => {
   let input = e.target.parentNode.firstChild;
   input.disabled = false;
   inputText.value = e.target.parentNode.firstChild.value;
+  inputText.focus();
   e.target.parentNode.remove();
 };
 
